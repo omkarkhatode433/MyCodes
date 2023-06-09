@@ -1,0 +1,18 @@
+
+public class TowerOfHanoi {
+
+	public static void main(String[] args) {
+		setTowerr(4,"Main","Helper","Target");
+
+	}
+
+	private static void setTowerr(int i, String m, String h, String t) {
+		if(i==0)
+			return;
+		setTowerr(i-1,m,t,h);
+		System.out.println("Move disc "+(i-1)+" from "+m+" to "+t);
+		setTowerr(i-1, h, m, t);
+		
+	}
+
+}
